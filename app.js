@@ -2,7 +2,7 @@ var bill = document.querySelector("#bill-amount");
 var cashPaid = document.querySelector("#cash-given");
 var checkButton = document.querySelector("#check-button");
 var errorMsg = document.querySelector("#error-message");
-var noOfNotes = document.querySelector(".no-of-notes");
+var noOfNotes = document.querySelectorAll(".no-of-notes");
 var availableNotes = [2000,500,100,20,10,5,1];
 function validateBillAndCashPaid(){
     errorMsg.style.display = "none";
@@ -36,7 +36,7 @@ function showMsg(message){
     {
         var numberOfNotes = Math.trunc(amountToBeReturned/availableNotes[i]);
         amountToBeReturned=amountToBeReturned % availableNotes[i];
-        document.querySelector("i");
+      
         noOfNotes[i].innerText = numberOfNotes;
 
     }
