@@ -36,6 +36,7 @@ function showMsg(message){
     {
         var numberOfNotes = Math.trunc(amountToBeReturned/availableNotes[i]);
         amountToBeReturned=amountToBeReturned % availableNotes[i];
+        document.querySelector("i");
         noOfNotes[i].innerText = numberOfNotes;
 
     }
