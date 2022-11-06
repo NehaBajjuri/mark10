@@ -21,6 +21,13 @@ body{
  text-align: center;
  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.input-label2{
+  font-size: x-large;
+  font-weight: 450;
+  display: block;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
 .para{
     font-size: x-large;
     color:yellow;
@@ -41,7 +48,7 @@ body{
 #error-message{
     font-size: x-large;
 }
-#check-button{
+.button{
     height: 2rem;
     display:block;
     padding:0.5rem 0.5rem;

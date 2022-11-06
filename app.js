@@ -24,10 +24,10 @@ function hideall(){
 function nextt(){
     if(bill.value === "")
 {
-    showMsg("Enter the amount");
+    showMsg("Enter the amount!!");
 }
 else if(bill.value <= 0){
-    showMsg("Enter a Valid amount");
+    showMsg("Enter a Valid amount!!");
 }else{
     next.style.display="none";
     errorMsg.style.display = "none";
