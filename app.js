@@ -44,33 +44,51 @@ function validateBillAndCashPaid(){
    console.log(bv);
     if(cv > 0  || cv === "")
     {
-       
-        if(bv > cv)
+      
+        if(cv >= bv)
         {
-        console.log("fcgvhj");
-         showMsg("The amount should be atleast equal to the bill amount");
-         table.style.display = "none";
-        }
-        else if(cv === bv)
-        {
-            showMsg("No change is to be given");
-            table.style.display = "none";
-        }
-        else if(cv > bv)
-        {
-            errorMsg.style.display = "none";
+               if(cv > bv ){
+            errorMsg.style.display = "block";
             returnTable.style.display = "block";
             table.style.display = "block";
             var amountToBeReturned = cv - bv;
+            showMsg(`The amount to be returned is ${amountToBeReturned}`);
             calculateChange(amountToBeReturned);
             console.log("dssd");
+               }
+               else{
+                errorMsg.style.display = "block";
+                showMsg("No change is to be given.");
+                returnTable.style.display = "none";
+                table.style.display = "none";
+               }
 
         }
-    }  
+      else
+        {
+            try{
+                   noOfNotes[i]<0;
+                }
+                catch(error)
+                {
+                console.log("rtfyg");
+                }
+                finally{
+                    showMsg("The amount should be atleast equal to the bill amount");
+                    table.style.display = "none";
+                }
+         showMsg("The amount should be atleast equal to the bill amount");
+         table.style.display = "none";
+        }
+    
+    
+
+}
     else{
         showMsg("You need to pay the bill!!");
     }
-};
+}
+;
 function showMsg(message){
     
     errorMsg.style.display = "block";
@@ -85,6 +103,17 @@ function showMsg(message){
         amountToBeReturned=amountToBeReturned % availableNotes[i];
       
         noOfNotes[i].innerText = numberOfNotes;
+        // try{
+        //    noOfNotes[i]<0;
+        // }
+        // catch(error)
+        // {
+        // console.log("rtfyg");
+        // }
+        // finally{
+        //     showMsg("The amount should be atleast equal to the bill amount");
+        //     table.style.display = "none";
+        // }
 
     }
  }
